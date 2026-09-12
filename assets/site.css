@@ -101,7 +101,8 @@ ul{margin:0 0 12px;padding-left:20px}
 .fig svg{display:block;width:100%;height:auto}
 .fig-t{font:600 14px "Source Sans 3",sans-serif;fill:#15171a}
 .fig-s{font:400 13px "Source Sans 3",sans-serif;fill:#5d636b}
-.pd-fig svg{max-width:420px}
+.pd-fig svg{max-width:440px;margin-inline:auto}
+.pd-fig figcaption{text-align:center}
 .bench-wrap{margin:20px 0 28px}
 .products td.thumb{padding:5px 8px}
 .shot.sm{width:60px;height:60px;aspect-ratio:auto;border-radius:3px}
