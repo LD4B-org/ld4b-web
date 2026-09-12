@@ -48,15 +48,17 @@
     <p><a href="/ld4b-web/info/laser-coupling/">How we couple lasers to fiber →</a></p>
   </div>
   <div class="bench">
-    <div class="bench-head"><span>Front-to-rear tracking error</span><span>Drag the temperature</span></div>
-    <svg id="drift" viewBox="0 0 560 280" role="img" aria-label="Power change versus case temperature: the LD4B module stays within about 0.2 dB, a typical module drifts up to about 0.9 dB"></svg>
+    <div class="bench-head"><span>Front-to-rear tracking error</span><span>Pick a module, drag the temperature</span></div>
+    <div class="bench-models" role="radiogroup" aria-label="Module"><button type="button" role="radio" aria-checked="false" data-i="0">1310 nm FP · 25 mW</button><button type="button" role="radio" aria-checked="true" data-i="1">1550 nm DFB · 15 mW</button><button type="button" role="radio" aria-checked="false" data-i="2">850 nm FP · 20 mW</button><button type="button" role="radio" aria-checked="false" data-i="3">1550 nm DFB · 20 mW</button></div>
+    <svg id="drift" viewBox="0 0 560 280" role="img" aria-label="Power change versus case temperature for the selected LD4B module compared with a typical module"></svg>
     <label class="slider" for="temp">−40 °C<input id="temp" type="range" min="-40" max="85" step="1" value="70">+85 °C</label>
     <div class="readout">
       <div><span>Case temperature</span><strong id="r-t">+70 °C</strong><small>&nbsp;</small></div>
       <div class="l"><span>LD4B module</span><strong id="r-l">−0.16 dB</strong><small id="r-lp">−3.6 % power</small></div>
       <div><span>Typical module</span><strong id="r-y">−0.51 dB</strong><small id="r-yp">−11.0 % power</small></div>
     </div>
-    <p class="note">LD4B curve: LD4B-1550-DFB-2.5G-15, read from the plot in its datasheet. Typical module: illustrative curve with the 0.8–1.0 dB drift common in commercial modules.</p>
+    <p class="note" id="drift-note"></p>
+    <script>window.LD4B_DRIFT={"models": [{"part": "LD4B-1310-FP-1.25G-25", "label": "1310 nm FP \u00b7 25 mW", "ref": 20, "points": [[-40, 0.12], [-30, 0.09], [-20, 0.08], [-10, 0.07], [0, 0.05], [10, 0.02], [20, 0], [30, -0.01], [40, -0.03], [50, -0.06], [60, -0.08], [70, -0.09], [80, -0.12]], "typ": "0.15", "max": "0.3", "pdf": "/ld4b-web/datasheets/LD4B-1310-FP-1.25G-25.pdf"}, {"part": "LD4B-1550-DFB-2.5G-15", "label": "1550 nm DFB \u00b7 15 mW", "ref": 25, "points": [[-40, 0.17], [-30, 0.12], [-20, 0.1], [-10, 0.1], [0, 0.07], [10, 0.03], [20, 0], [25, 0], [30, -0.02], [40, -0.05], [50, -0.12], [60, -0.15], [70, -0.16], [80, -0.2], [85, -0.22]], "typ": "0.3", "max": "0.6", "pdf": "/ld4b-web/datasheets/LD4B-1550-DFB-2.5G-15.pdf"}, {"part": "LD4B-850-FP-20", "label": "850 nm FP \u00b7 20 mW", "ref": 25, "points": [[-10, 0.1], [0, 0.07], [5, 0.03], [10, -0.02], [15, -0.04], [20, -0.03], [25, 0], [30, 0.02], [35, 0.03], [40, 0.02], [45, -0.02], [50, -0.06], [55, -0.08], [60, -0.1]], "typ": "0.3", "max": "0.6", "pdf": "/ld4b-web/datasheets/LD4B-850-FP-20.pdf"}, {"part": "LD4B-1550-DFB-2.5G-20", "label": "1550 nm DFB \u00b7 20 mW", "ref": 25, "points": [[-40, 0.23], [-34, 0.05], [-27, -0.06], [-20, 0.05], [-14, 0.2], [-8, 0.28], [-2, 0.2], [3, 0.02], [8, -0.12], [14, -0.17], [20, -0.1], [25, 0], [32, 0.16], [36, 0.14], [40, 0], [48, -0.22], [56, -0.31], [64, -0.2], [72, 0], [76, 0.02], [83, -0.14], [85, -0.16]], "typ": "0.5", "max": "1.0", "pdf": "/ld4b-web/datasheets/LD4B-1550-DFB-2.5G-20.pdf"}], "start": 1};</script>
   </div>
 </div></section>
 

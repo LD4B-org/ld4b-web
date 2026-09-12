@@ -117,6 +117,10 @@ table.products{border-collapse:collapse;width:100%;min-width:860px;font-size:15p
 .products th{position:sticky;top:0;background:var(--alt);text-align:left;font:600 13px var(--body);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:10px 12px;border-bottom:1px solid var(--rule)}
 .products td{padding:10px 12px;border-bottom:1px solid var(--rule-soft);vertical-align:middle}
 .products tr:hover td{background:#fafafa}
+.products tr.row-link{cursor:pointer}
+.products tr.row-link:hover td{background:var(--red-soft)}
+.products a.part{color:var(--ink);text-decoration:none}
+.products tr.row-link:hover a.part{color:var(--red-dark);text-decoration:underline}
 .products td.n{white-space:nowrap;font-variant-numeric:tabular-nums}
 .part{font:500 14px var(--mono)}
 .c-pdf{width:56px}.c-wl{width:120px}.c-pw{width:90px}.c-pkg{width:160px}.c-fib{width:90px}.c-act{width:170px}.c-prod{width:280px}.c-fam{width:90px}
@@ -145,6 +149,11 @@ table.products{border-collapse:collapse;width:100%;min-width:860px;font-size:15p
 .readout .l strong{color:#ff5a6b}
 .readout small{font:400 12px var(--mono);color:#9aa1a9}
 .bench .note{font-size:13px;color:#9aa1a9;margin:0}
+.bench .note a{color:#fff}
+.bench-models{display:flex;flex-wrap:wrap;gap:6px}
+.bench-models button{font:600 13px/1 var(--body);color:#c9ced4;background:#20242a;border:1px solid #30353b;border-radius:3px;padding:8px 10px;cursor:pointer}
+.bench-models button:hover{border-color:#ff3b4f;color:#fff}
+.bench-models button[aria-checked="true"]{background:#ff3b4f;border-color:#ff3b4f;color:#fff}
 @media (max-width:480px){.readout{grid-template-columns:1fr 1fr}.readout div:first-child{grid-column:1/-1}}
 .pdf{display:inline-block;font:600 12px var(--body);color:#fff;background:var(--red);padding:3px 6px;border-radius:2px;text-decoration:none}
 .pdf:hover{background:var(--red-dark);color:#fff}
