@@ -95,6 +95,14 @@ ul{margin:0 0 12px;padding-left:20px}
 .pkg-row .shot{width:220px}
 .pkg-row.no-img{grid-template-columns:1fr}
 .ctrl-photo{max-width:320px;border-radius:4px;margin:4px 0 16px}
+.ctrl-fig{max-width:260px;margin:4px 0 16px}
+.ctrl-fig figcaption,.fig figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.fig{margin:18px 0 24px;background:var(--alt);border-radius:4px;padding:16px 18px}
+.fig svg{display:block;width:100%;height:auto}
+.fig-t{font:600 14px "Source Sans 3",sans-serif;fill:#15171a}
+.fig-s{font:400 13px "Source Sans 3",sans-serif;fill:#5d636b}
+.pd-fig svg{max-width:420px}
+.bench-wrap{margin:20px 0 28px}
 .products td.thumb{padding:5px 8px}
 .shot.sm{width:60px;height:60px;aspect-ratio:auto;border-radius:3px}
 .shot.sm img{max-width:92%;max-height:92%;filter:drop-shadow(3px 7px 6px rgba(0,0,0,.24)) drop-shadow(0 1px 2px rgba(0,0,0,.12))}
