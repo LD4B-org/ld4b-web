@@ -102,6 +102,9 @@ ul{margin:0 0 12px;padding-left:20px}
 .fig-t{font:600 14px "Source Sans 3",sans-serif;fill:#15171a}
 .fig-s{font:400 13px "Source Sans 3",sans-serif;fill:#5d636b}
 .pd-fig svg{max-width:440px;margin-inline:auto}
+.coupling-fig{background:radial-gradient(120% 95% at 45% 35%,#fff 0%,#eef0f2 62%,#e1e5e9 100%);padding:10px 12px 16px}
+.coupling-fig .lc-l{font:600 17px "Source Sans 3",sans-serif;fill:#15171a}
+.coupling-fig .lc-s{font:400 15px "Source Sans 3",sans-serif;fill:#5d636b}
 .pd-fig figcaption{text-align:center}
 .bench-wrap{margin:20px 0 28px}
 .products td.thumb{padding:5px 8px}
