@@ -95,6 +95,7 @@ ul{margin:0 0 12px;padding-left:20px}
 .pkg-row .shot{width:220px}
 .pkg-row.no-img{grid-template-columns:1fr}
 .ctrl-photo{max-width:320px;border-radius:4px;margin:4px 0 16px}
+.team-photo{display:block;max-width:100%;height:auto;border-radius:4px;margin:4px 0 20px}
 .ctrl-fig{max-width:260px;margin:4px 0 16px}
 .ctrl-fig figcaption,.fig figcaption{font-size:14px;color:var(--muted);margin-top:8px}
 .fig{margin:18px 0 24px;background:var(--alt);border-radius:4px;padding:16px 18px}
@@ -131,11 +132,11 @@ ul{margin:0 0 12px;padding-left:20px}
 .faq details p{color:var(--muted)}
 .faq-sec{margin-bottom:32px}
 .faq-sec h2{font-size:26px;margin-bottom:8px}
-.pkgs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
+.pkgs{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:12px}
 .pkg{text-decoration:none;color:var(--ink);text-align:center;padding:0 0 6px}
 .pkg:hover{border-color:var(--red)}
 .pkg span{font:600 16px var(--head)}
-@media (max-width:860px){.pkgs{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:860px){.pkgs{grid-template-columns:repeat(4,minmax(0,1fr))}}
 
 .filter{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:8px 0 16px}
 .filter label{font-weight:600}
