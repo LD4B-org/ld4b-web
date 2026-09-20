@@ -47,11 +47,11 @@
         {name: 'email', value: form.email.value}, {name: 'firstname', value: form.name.value},
         {name: 'company', value: form.company.value}, {name: 'country', value: form.country.value},
         {name: 'message', value: 'Part: ' + form.part.value + '\n' + form.message.value}],
-        context: {pageUri: location.href, pageName: document.title},
+        context: {hutk: (document.cookie.match(/hubspotutk=([^;]*)/) || [])[1], pageUri: location.href, pageName: document.title},
         legalConsentOptions: {consent: {consentToProcess: true, text: 'I agree that LD4B processes my data to answer this request.'}}};
       status.textContent = 'Sending…';
       fetch('https://api.hsforms.com/submissions/v3/integration/submit/' + hs.portalId + '/' + hs.formId, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(body)})
-        .then(function(r){ if (!r.ok) throw new Error(r.status); status.textContent = 'Thank you. We reply within one business day.'; status.classList.add('ok'); form.reset(); })
+        .then(function(r){ if (!r.ok) throw new Error(r.status); status.textContent = 'Thank you. We will reply ASAP.'; status.classList.add('ok'); form.reset(); })
         .catch(function(){ status.innerHTML = 'Sending failed. Please email us at <a href="mailto:' + cfg.email + '">' + cfg.email + '</a>.'; status.classList.add('err'); });
     } else {
       location.href = 'mailto:' + cfg.email + '?subject=' + encodeURIComponent('Quote request' + (form.part.value ? ': ' + form.part.value : '')) + '&body=' + encodeURIComponent(text);
