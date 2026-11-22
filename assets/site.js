@@ -73,6 +73,13 @@
         tr.classList.toggle('on', !!on);
       });
       document.querySelectorAll('.specs tbody tr[data-pkg]:not([data-fiber])').forEach(function(el){ el.hidden = !!grp && el.getAttribute('data-pkg') !== grp; });
+      var photos = document.querySelectorAll('.prod-photo img[data-code]'), shown = null;
+      photos.forEach(function(img){ if (!shown && (!sel.pkg || img.getAttribute('data-code') === sel.pkg)) shown = img; });
+      if (photos.length) {  // no photo of the chosen package (COAXH): hide the figure rather than show another package
+        photos.forEach(function(img){ img.hidden = img !== shown; });
+        document.querySelector('.prod-photo').hidden = !shown;
+        if (shown) document.querySelector('.prod-photo figcaption span').textContent = shown.getAttribute('data-code');
+      }
       document.querySelectorAll('.order-group li[data-code]').forEach(function(el){ el.hidden = !!sel.pkg && el.getAttribute('data-code') !== sel.pkg; });
       document.querySelectorAll('div[data-fiber], .order-group li[data-fiber]').forEach(function(el){ el.hidden = !!sel.fiber && el.getAttribute('data-fiber') !== sel.fiber; });
       var part = vs.getAttribute('data-part'), q = '?part=' + encodeURIComponent(part) + (sel.pkg ? '&pkg=' + sel.pkg : '') + (sel.fiber ? '&fiber=' + sel.fiber : '');
@@ -92,6 +99,12 @@
       applyVariant();
     });
   }
+
+  function openHash(){  // /info/faq/#question-id opens that question
+    var d = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (d && d.tagName === 'DETAILS') d.open = true;
+  }
+  openHash(); window.addEventListener('hashchange', openHash);
 
   var form = document.getElementById('quote-form');
   if (!form) return;

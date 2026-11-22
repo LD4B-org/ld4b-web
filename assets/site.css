@@ -126,7 +126,11 @@ ul{margin:0 0 12px;padding-left:20px}
 .faq summary::after{content:"+";color:var(--red);font-weight:600}
 .faq details[open] summary::after{content:"–"}
 .faq details p{color:var(--muted)}
-.faq-sec{margin-bottom:32px}
+.faq-sec{margin-bottom:32px;scroll-margin-top:90px}
+.faq-nav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px}
+.faq details{scroll-margin-top:90px}
+.faq details:target summary{color:var(--red-dark)}
+.page-faq{padding-top:0}
 .faq-sec h2{font-size:26px;margin-bottom:8px}
 .pkgs{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:12px}
 .pkg{text-decoration:none;color:var(--ink);text-align:center;padding:0 0 6px}
@@ -150,6 +154,8 @@ table.products{border-collapse:collapse;width:100%;min-width:940px;font-size:15p
 .products tr.row-link:hover a.part{color:var(--red-dark);text-decoration:underline}
 .products td.n{white-space:nowrap;font-variant-numeric:tabular-nums}
 .part{font:500 14px var(--mono)}
+.products.pd .c-prod{width:200px}.products.pd .c-pkg{width:170px}.products.pd .c-fib{width:136px}.products.pd .c-act{width:150px}
+.products.pd button.opt{padding:4px 6px}  /* photodiodes: buttons in one line in narrower columns, the comments get the width */
 .c-pdf{width:112px}.c-img{width:80px}.c-wl{width:120px}.c-pw{width:90px}.c-pkg{width:160px}.c-fib{width:120px}.c-act{width:170px}.c-prod{width:280px}.c-fam{width:90px}
 
 .drift-sec{border-bottom:1px solid var(--rule)}
@@ -179,6 +185,7 @@ form.quote .hp{position:absolute;left:-9999px}
 
 .app-block{padding-block:12px 28px;border-bottom:1px solid var(--rule)}
 .app-block:last-child{border-bottom:0}
+.app-head{display:flex;align-items:center;gap:16px}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{border:1px solid var(--ink);color:var(--ink);padding:6px 10px;border-radius:2px;text-decoration:none;font-size:15px}
 .chip:hover{background:var(--ink);color:#fff}
@@ -191,6 +198,11 @@ form.quote .hp{position:absolute;left:-9999px}
 .list-row{display:block;padding:18px 0;border-bottom:1px solid var(--rule);text-decoration:none;color:var(--ink)}
 .list-row:hover h3{color:var(--red)}
 .list-row p{margin:4px 0 0;color:var(--muted)}
+.list-row.with-icon{display:grid;grid-template-columns:56px 1fr;gap:20px;align-items:center}
+.info-icon{width:56px;height:56px;stroke:var(--ink);padding:6px;background:var(--alt);border-radius:6px}
+.info-icon .r{stroke:var(--red)}
+.info-icon .dot{stroke-width:3}
+.list-row:hover .info-icon{background:var(--red-soft)}
 .specs{width:100%;border-collapse:collapse;margin:8px 0 18px;font-size:15px}
 .specs th,.specs td{border-bottom:1px solid var(--rule);padding:7px 10px;text-align:left;vertical-align:top}
 .specs th{font:600 12px var(--body);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);background:var(--alt)}
@@ -220,7 +232,24 @@ button.opt{font-size:13px;padding:4px 8px}
 .dl li{break-inside:avoid;padding:5px 0}
 .ctrl{padding-block:12px 28px;border-bottom:1px solid var(--rule)}
 .ctrl-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.news{padding-block:8px 20px;border-bottom:1px solid var(--rule)}
+.news{padding-block:8px 20px;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:1fr 260px;gap:28px;align-items:start}
+.news:not(:has(img)){grid-template-columns:1fr}
+.news-photo{width:100%;border:1px solid var(--rule);margin-top:28px}
+@media (max-width:700px){.news{grid-template-columns:1fr}.news-photo{max-width:320px;margin-top:0}}
+.news-item{display:grid;grid-template-columns:88px 1fr;gap:16px;align-items:start}
+.news-item:not(:has(img)){grid-template-columns:1fr}
+.news-thumb{width:88px;height:88px;object-fit:cover;border:1px solid var(--rule)}
+.news-date{font:600 13px var(--body);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 4px}
+.prose .news h2,.news h2{margin:0 0 12px}
+.news-date+h2{margin-top:0}
+.news-list{display:flex;flex-direction:column;gap:18px}
+.news-item h3{font-size:20px;margin:0 0 4px}
+.news-item h3 a{color:var(--ink);text-decoration:none}
+.news-item h3 a:hover{color:var(--red)}
+.not-listed{margin-top:24px;padding:14px 18px;background:var(--alt);border-left:3px solid var(--red);font-size:18px}
+.prod-photo{margin:0 0 20px;border:1px solid var(--rule);background:#fff;padding:12px;max-width:560px}
+.prod-photo img{margin-inline:auto;max-height:340px;width:auto}
+.prod-photo figcaption{font-size:14px;color:var(--muted);text-align:center;margin-top:6px}
 
 .site-footer{background:var(--ink);color:#c5c9ce;padding-block:48px 24px;font-size:15px}
 .site-footer a{color:#fff;text-decoration:none}
