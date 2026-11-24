@@ -1,3 +1,9 @@
+// events for Google Tag Manager (the agency builds GA4 / Google Ads tags on them); no personal data in them
+function ld4bEvent(o){ (window.dataLayer = window.dataLayer || []).push(o); }
+document.addEventListener('click', function(ev){
+  var a = ev.target.closest && ev.target.closest('a[href^="mailto:"]');
+  if (a) ld4bEvent({event: 'email_click', email_address: a.getAttribute('href').slice(7).split('?')[0], link_location: a.closest('header') ? 'header' : a.closest('footer') ? 'footer' : 'page'});
+});
 (function(){
   var qs = new URLSearchParams(location.search);
   document.querySelectorAll('select[data-filter="wl"]').forEach(function(sel){
@@ -130,7 +136,7 @@
         legalConsentOptions: {consent: {consentToProcess: true, text: 'I agree that LD4B processes my data to answer this request.'}}};
       status.textContent = 'Sending…';
       fetch('https://api.hsforms.com/submissions/v3/integration/submit/' + hs.portalId + '/' + hs.formId, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(body)})
-        .then(function(r){ if (!r.ok) throw new Error(r.status); status.textContent = 'Thank you. We will reply ASAP.'; status.classList.add('ok'); form.reset(); })
+        .then(function(r){ if (!r.ok) throw new Error(r.status); ld4bEvent({event: 'quote_request', part: form.part.value, form_page: location.pathname}); status.textContent = 'Thank you. We will reply ASAP.'; status.classList.add('ok'); form.reset(); })
         .catch(function(){ status.innerHTML = 'Sending failed. Please email us at <a href="mailto:' + cfg.email + '">' + cfg.email + '</a>.'; status.classList.add('err'); });
     } else {
       location.href = 'mailto:' + cfg.email + '?subject=' + encodeURIComponent('Quote request' + (form.part.value ? ': ' + form.part.value : '')) + '&body=' + encodeURIComponent(text);
