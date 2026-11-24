@@ -157,6 +157,28 @@ table.products{border-collapse:collapse;width:100%;min-width:940px;font-size:15p
 .products.pd .c-prod{width:200px}.products.pd .c-pkg{width:170px}.products.pd .c-fib{width:136px}.products.pd .c-act{width:150px}
 .products.pd button.opt{padding:4px 6px}  /* photodiodes: buttons in one line in narrower columns, the comments get the width */
 .c-pdf{width:112px}.c-img{width:80px}.c-wl{width:120px}.c-pw{width:90px}.c-pkg{width:160px}.c-fib{width:120px}.c-act{width:170px}.c-prod{width:280px}.c-fam{width:90px}
+/* phones: each product row becomes a card, so "Request a quote" is visible without scrolling the table sideways */
+@media (max-width:760px){
+.table-wrap:has(table.products){overflow:visible;border:0}
+table.products,table.products tbody{display:block;min-width:0;width:100%}
+table.products thead{display:none}
+table.products tr{display:grid;grid-template-columns:72px 1fr 1fr;grid-template-areas:"img prod prod" "img wl pw" "com com com" "pkg pkg pkg" "fib fib fib" "docs docs act";column-gap:12px;row-gap:6px;align-items:center;border:1px solid var(--rule);border-radius:4px;padding:12px;margin-bottom:12px;background:#fff}
+table.products.pd tr{grid-template-areas:"img prod prod" "img com com" "pkg pkg pkg" "fib fib fib" "docs docs act"}
+table.products td{display:block;padding:0;border:0;background:none!important}
+table.products td.thumb{grid-area:img;align-self:start;padding:0}
+table.products td.prod{grid-area:prod}
+table.products td.wl{grid-area:wl}table.products td.pw{grid-area:pw}
+table.products td.com{grid-area:com}table.products td.com:empty{display:none}
+table.products td.o-pkg{grid-area:pkg}table.products td.o-fib{grid-area:fib}
+table.products td.o-pkg,table.products td.o-fib{display:flex;align-items:center;gap:8px}
+table.products td.docs{grid-area:docs}
+table.products td.act{grid-area:act;justify-self:end}
+table.products td.o-pkg::before{content:"Package";flex:0 0 64px;color:var(--muted);font-size:13px}
+table.products td.o-fib::before{content:"Fiber";flex:0 0 64px;color:var(--muted);font-size:13px}
+table.products .opts{flex-wrap:wrap;white-space:normal}
+table.products a.part{white-space:normal;word-break:break-all}
+table.products tr.row-link:hover td{background:none}
+}
 
 .drift-sec{border-bottom:1px solid var(--rule)}
 .drift-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;align-items:start}
