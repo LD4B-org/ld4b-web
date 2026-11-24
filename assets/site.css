@@ -286,3 +286,21 @@ button.opt{font-size:13px;padding:4px 8px}
 .f-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;border-top:1px solid #33373c;margin-top:32px;padding-top:16px}
 .f-links{display:flex;flex-wrap:wrap;gap:16px}
 @media (max-width:860px){.f-grid{grid-template-columns:1fr 1fr}}
+
+/* HubSpot cookie banner: a compact bar at the bottom instead of HubSpot's large card at the top.
+   The "html" prefix outranks HubSpot's own "#hs-banner-parent #hs-eu-cookie-confirmation" rules. */
+html #hs-banner-parent #hs-eu-cookie-confirmation,html #hs-banner-parent #hs-banner-gpc{inset:auto 0 16px 0;width:1100px;max-width:calc(100% - 32px);max-height:60vh;font-size:13px;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,.22)}
+html #hs-eu-cookie-confirmation #hs-eu-cookie-confirmation-inner{display:grid;grid-template-columns:1fr auto;column-gap:24px;row-gap:4px;align-items:center;padding:14px 20px}
+html #hs-eu-cookie-confirmation #hs-eu-cookie-confirmation-inner>*{grid-column:1}
+html #hs-eu-cookie-confirmation #hs-eu-header-container{display:none}
+html #hs-banner-parent #hs-eu-cookie-confirmation p{line-height:1.45}
+html #hs-eu-cookie-confirmation #hs-eu-cookie-confirmation-buttons-area{grid-column:2;grid-row:1/span 2}
+html #hs-eu-cookie-confirmation #hs-eu-confirmation-button-group{flex-wrap:nowrap;align-items:center;gap:12px}
+html #hs-eu-cookie-confirmation #hs-eu-opt-in-buttons{flex-wrap:nowrap}
+html #hs-eu-cookie-confirmation #hs-eu-confirmation-button,html #hs-eu-cookie-confirmation #hs-eu-decline-button{min-width:6.5em;height:2.4em;padding:0 1.2em}
+@media (max-width:760px){
+html #hs-banner-parent #hs-eu-cookie-confirmation,html #hs-banner-parent #hs-banner-gpc{inset:auto 0 10px 0;max-width:calc(100% - 20px);font-size:12px}
+html #hs-eu-cookie-confirmation #hs-eu-cookie-confirmation-inner{grid-template-columns:1fr;padding:12px 14px;row-gap:6px}
+html #hs-eu-cookie-confirmation #hs-eu-cookie-confirmation-buttons-area{grid-column:1;grid-row:auto}
+html #hs-eu-cookie-confirmation #hs-eu-confirmation-button-group{flex-wrap:wrap;justify-content:flex-end}
+}
