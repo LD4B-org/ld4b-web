@@ -1,6 +1,10 @@
 // events for Google Tag Manager (the agency builds GA4 / Google Ads tags on them); no personal data in them
 function ld4bEvent(o){ (window.dataLayer = window.dataLayer || []).push(o); }
 document.addEventListener('click', function(ev){
+  var c = ev.target.closest && ev.target.closest('a.cookie-settings');
+  if (c) { ev.preventDefault(); (window._hsp = window._hsp || []).push(['showBanner']); }
+});
+document.addEventListener('click', function(ev){
   var a = ev.target.closest && ev.target.closest('a[href^="mailto:"]');
   if (a) ld4bEvent({event: 'email_click', email_address: a.getAttribute('href').slice(7).split('?')[0], link_location: a.closest('header') ? 'header' : a.closest('footer') ? 'footer' : 'page'});
 });
