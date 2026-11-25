@@ -146,8 +146,8 @@
 /products/laser-diodes-telecom/1480-nm/1480-nm-dfb-coax-sm-50-mw /products/laser-diodes-telecom/ld4b-1480-dfb-50/?pkg=COAX&fiber=SMF 301
 /products/laser-diodes-telecom/1480-nm/1480-nm-dfb-dil-pm-50-mw /products/laser-diodes-telecom/ld4b-1480-dfb-50/?pkg=BTF&fiber=PMF 301
 /products/laser-diodes-telecom/1480-nm/1480-nm-dfb-dil-sm-50-mw /products/laser-diodes-telecom/ld4b-1480-dfb-50/?pkg=BTF&fiber=SMF 301
-/products/laser-diodes-telecom/1480-nm/1480-nm-dfbtec-pm-50-mw /products/laser-diodes-telecom/ld4b-1480-dfb-50-tec/?fiber=PMF 301
-/products/laser-diodes-telecom/1480-nm/1480-nm-dfbtec-sm-50-mw /products/laser-diodes-telecom/ld4b-1480-dfb-50-tec/?fiber=SMF 301
+/products/laser-diodes-telecom/1480-nm/1480-nm-dfbtec-pm-50-mw /products/laser-diodes-telecom/ld4b-1480-dfb-1g-50-tec/?fiber=PMF 301
+/products/laser-diodes-telecom/1480-nm/1480-nm-dfbtec-sm-50-mw /products/laser-diodes-telecom/ld4b-1480-dfb-1g-50-tec/?fiber=SMF 301
 /products/laser-diodes-telecom/1490-nm/1490-nm-dfb-2-5g-btf-pm-15-mw /products/laser-diodes-telecom/ld4b-1490-dfb-2-5g-15/?pkg=BTF&fiber=PMF 301
 /products/laser-diodes-telecom/1490-nm/1490-nm-dfb-2-5g-btf-sm-15-mw /products/laser-diodes-telecom/ld4b-1490-dfb-2-5g-15/?pkg=BTF&fiber=SMF 301
 /products/laser-diodes-telecom/1490-nm/1490-nm-dfb-2-5g-btf-sm-20-mw /products/laser-diodes-telecom/ld4b-1490-dfb-2-5g-20/?pkg=BTF&fiber=SMF 301
@@ -602,8 +602,8 @@
 /products/laser-diodes/1480-nm/1480-nm-dfb-coax-sm-50-mw /products/laser-diodes-telecom/ld4b-1480-dfb-50/?pkg=COAX&fiber=SMF 301
 /products/laser-diodes/1480-nm/1480-nm-dfb-dil-pm-50-mw /products/laser-diodes-telecom/ld4b-1480-dfb-50/?pkg=BTF&fiber=PMF 301
 /products/laser-diodes/1480-nm/1480-nm-dfb-dil-sm-50-mw /products/laser-diodes-telecom/ld4b-1480-dfb-50/?pkg=BTF&fiber=SMF 301
-/products/laser-diodes/1480-nm/1480-nm-dfbtec-pm-50-mw /products/laser-diodes-telecom/ld4b-1480-dfb-50-tec/?fiber=PMF 301
-/products/laser-diodes/1480-nm/1480-nm-dfbtec-sm-50-mw /products/laser-diodes-telecom/ld4b-1480-dfb-50-tec/?fiber=SMF 301
+/products/laser-diodes/1480-nm/1480-nm-dfbtec-pm-50-mw /products/laser-diodes-telecom/ld4b-1480-dfb-1g-50-tec/?fiber=PMF 301
+/products/laser-diodes/1480-nm/1480-nm-dfbtec-sm-50-mw /products/laser-diodes-telecom/ld4b-1480-dfb-1g-50-tec/?fiber=SMF 301
 /products/laser-diodes/1490-nm/1490-nm-dfb-2-5g-btf-pm-15-mw /products/laser-diodes-telecom/ld4b-1490-dfb-2-5g-15/?pkg=BTF&fiber=PMF 301
 /products/laser-diodes/1490-nm/1490-nm-dfb-2-5g-btf-sm-15-mw /products/laser-diodes-telecom/ld4b-1490-dfb-2-5g-15/?pkg=BTF&fiber=SMF 301
 /products/laser-diodes/1490-nm/1490-nm-dfb-2-5g-btf-sm-20-mw /products/laser-diodes-telecom/ld4b-1490-dfb-2-5g-20/?pkg=BTF&fiber=SMF 301
@@ -870,3 +870,5 @@
 /products/laser-diodes/980-nm/fp-coax-sm-15-mw-980-nm /products/laser-diodes-vis-nir/ld4b-980-fp-15/?pkg=COAX&fiber=SMF 301
 /products/laser-diodes/980-nm/fp-dil-pm-15-mw-980-nm /products/laser-diodes-vis-nir/ld4b-980-fp-15/?pkg=BTF&fiber=PMF 301
 /products/laser-diodes/980-nm/fp-dil-sm-15-mw-980-nm /products/laser-diodes-vis-nir/ld4b-980-fp-15/?pkg=BTF&fiber=SMF 301
+/products/laser-diodes-telecom/ld4b-1480-dfb-50-tec/ /products/laser-diodes-telecom/ld4b-1480-dfb-1g-50-tec/ 301
+/products/laser-diodes-telecom/ld4b-1480-dfb-50-tec /products/laser-diodes-telecom/ld4b-1480-dfb-1g-50-tec/ 301
