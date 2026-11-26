@@ -471,6 +471,12 @@
 /products/slds/sld-830-nm/sld-830-nm-coax-sm-2-mw /products/slds/sld4b-830-2/?pkg=COAX&fiber=SMF 301
 /products/slds/sld-980-nm/sld-980-nm-coax-pm-2-mw /products/slds/sld4b-980-2/?pkg=COAX&fiber=PMF 301
 /products/slds/sld-980-nm/sld-980-nm-coax-sm-2-mw /products/slds/sld4b-980-2/?pkg=COAX&fiber=SMF 301
+/products/laser-diodes-vis-nir/639-nm/fp-coax-sm-5-mw-639-nm /products/laser-diodes-vis-nir/ld4b-639-fp-5/?pkg=COAX&fiber=SMF 301
+/products/laser-diodes-vis-nir/639-nm/fp-coax-pm-5-mw-639-nm /products/laser-diodes-vis-nir/ld4b-639-fp-5/?pkg=COAX&fiber=PMF 301
+/products/laser-diodes-vis-nir/639-nm/fp-btf-sm-5-mw-639-nm /products/laser-diodes-vis-nir/ld4b-639-fp-5/?pkg=BTF&fiber=SMF 301
+/products/laser-diodes-vis-nir/639-nm/fp-btf-pm-5-mw-639-nm /products/laser-diodes-vis-nir/ld4b-639-fp-5/?pkg=BTF&fiber=PMF 301
+/products/laser-diodes-vis-nir/639-nm/fp-dil-sm-5-mw-639-nm /products/laser-diodes-vis-nir/ld4b-639-fp-5/?pkg=BTF&fiber=SMF 301
+/products/laser-diodes-vis-nir/639-nm/fp-dil-pm-5-mw-639-nm /products/laser-diodes-vis-nir/ld4b-639-fp-5/?pkg=BTF&fiber=PMF 301
 /products/laser-diodes /products/ 301
 /products/laser-diodes/1270-nm /products/laser-diodes-telecom/?wl=1270 301
 /products/laser-diodes/1290-nm /products/laser-diodes-telecom/?wl=1290 301
@@ -870,5 +876,11 @@
 /products/laser-diodes/980-nm/fp-coax-sm-15-mw-980-nm /products/laser-diodes-vis-nir/ld4b-980-fp-15/?pkg=COAX&fiber=SMF 301
 /products/laser-diodes/980-nm/fp-dil-pm-15-mw-980-nm /products/laser-diodes-vis-nir/ld4b-980-fp-15/?pkg=BTF&fiber=PMF 301
 /products/laser-diodes/980-nm/fp-dil-sm-15-mw-980-nm /products/laser-diodes-vis-nir/ld4b-980-fp-15/?pkg=BTF&fiber=SMF 301
+/products/laser-diodes/639-nm/fp-coax-sm-5-mw-639-nm /products/laser-diodes-vis-nir/ld4b-639-fp-5/?pkg=COAX&fiber=SMF 301
+/products/laser-diodes/639-nm/fp-coax-pm-5-mw-639-nm /products/laser-diodes-vis-nir/ld4b-639-fp-5/?pkg=COAX&fiber=PMF 301
+/products/laser-diodes/639-nm/fp-btf-sm-5-mw-639-nm /products/laser-diodes-vis-nir/ld4b-639-fp-5/?pkg=BTF&fiber=SMF 301
+/products/laser-diodes/639-nm/fp-btf-pm-5-mw-639-nm /products/laser-diodes-vis-nir/ld4b-639-fp-5/?pkg=BTF&fiber=PMF 301
+/products/laser-diodes/639-nm/fp-dil-sm-5-mw-639-nm /products/laser-diodes-vis-nir/ld4b-639-fp-5/?pkg=BTF&fiber=SMF 301
+/products/laser-diodes/639-nm/fp-dil-pm-5-mw-639-nm /products/laser-diodes-vis-nir/ld4b-639-fp-5/?pkg=BTF&fiber=PMF 301
 /products/laser-diodes-telecom/ld4b-1480-dfb-50-tec/ /products/laser-diodes-telecom/ld4b-1480-dfb-1g-50-tec/ 301
 /products/laser-diodes-telecom/ld4b-1480-dfb-50-tec /products/laser-diodes-telecom/ld4b-1480-dfb-1g-50-tec/ 301
