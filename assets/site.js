@@ -130,17 +130,18 @@ document.addEventListener('click', function(ev){
     if (!form.message.value.trim()) { status.textContent = 'Write a short message: part number, quantity or parameters.'; status.classList.add('err'); form.message.focus(); return; }
     if (!form.consent.checked) { status.textContent = 'Tick the consent box so we may process your request.'; status.classList.add('err'); form.consent.focus(); return; }
     var cfg = (window.LD4B || {}), hs = cfg.hubspot || {};
-    var text = 'Part: ' + form.part.value + '\n' + form.message.value + '\n\nName: ' + form.name.value + '\nCompany: ' + form.company.value + '\nCountry: ' + form.country.value;
+    var heard = form.heard.value ? '\n\nHeard about us: ' + form.heard.value : '';
+    var text = 'Part: ' + form.part.value + '\n' + form.message.value + heard + '\n\nName: ' + form.name.value + '\nCompany: ' + form.company.value + '\nCountry: ' + form.country.value;
     if (hs.portalId && hs.formId) {
       var body = {fields: [
         {name: 'email', value: form.email.value}, {name: 'firstname', value: form.name.value},
         {name: 'company', value: form.company.value}, {name: 'country', value: form.country.value},
-        {name: 'message', value: 'Part: ' + form.part.value + '\n' + form.message.value}],
+        {name: 'message', value: 'Part: ' + form.part.value + '\n' + form.message.value + heard}],
         context: {hutk: (document.cookie.match(/hubspotutk=([^;]*)/) || [])[1], pageUri: location.href, pageName: document.title},
         legalConsentOptions: {consent: {consentToProcess: true, text: 'I agree that LD4B processes my data to answer this request.'}}};
       status.textContent = 'Sending…';
       fetch('https://api.hsforms.com/submissions/v3/integration/submit/' + hs.portalId + '/' + hs.formId, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(body)})
-        .then(function(r){ if (!r.ok) throw new Error(r.status); ld4bEvent({event: 'quote_request', part: form.part.value, form_page: location.pathname}); status.textContent = 'Thank you. We will reply ASAP.'; status.classList.add('ok'); form.reset(); })
+        .then(function(r){ if (!r.ok) throw new Error(r.status); ld4bEvent({event: 'quote_request', part: form.part.value, form_page: location.pathname, heard_about: form.heard.value}); status.textContent = 'Thank you. We will reply ASAP.'; status.classList.add('ok'); form.reset(); })
         .catch(function(){ status.innerHTML = 'Sending failed. Please email us at <a href="mailto:' + cfg.email + '">' + cfg.email + '</a>.'; status.classList.add('err'); });
     } else {
       location.href = 'mailto:' + cfg.email + '?subject=' + encodeURIComponent('Quote request' + (form.part.value ? ': ' + form.part.value : '')) + '&body=' + encodeURIComponent(text);
