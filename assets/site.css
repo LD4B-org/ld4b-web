@@ -220,6 +220,13 @@ form.quote .hp{position:absolute;left:-9999px}
 .pkg-row .tag{font:600 13px var(--body);text-transform:uppercase;letter-spacing:.08em;color:var(--red-dark)}
 .img-missing{aspect-ratio:1;display:grid;place-items:center;background:var(--alt);color:var(--muted);font-size:14px}
 @media (max-width:640px){.pkg-row{grid-template-columns:1fr}.pkg-row .shot,.img-missing{max-width:220px}}
+.specs .m-val,.specs .m-sub{display:none}
+.specs .c-unit{white-space:nowrap}
+@media (max-width:640px){
+.specs.m-specs .c-symbol,.specs.m-specs .c-min,.specs.m-specs .c-typ,.specs.m-specs .c-max,.specs.m-specs .c-conditions{display:none}
+.specs.m-specs .m-val{display:table-cell;white-space:normal}
+.specs.m-specs .m-sub{display:block;margin-top:2px;font-size:13px;line-height:1.35;color:var(--muted)}
+}
 .prose h2{margin:28px 0 8px;font-size:28px}
 .list{border-top:1px solid var(--rule)}
 .list-row{display:block;padding:18px 0;border-bottom:1px solid var(--rule);text-decoration:none;color:var(--ink)}
